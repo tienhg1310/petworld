@@ -9,6 +9,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+
 }
 
 /* topbar */
@@ -41,13 +42,21 @@ body{
     background: transparent;
     border: none;
     transform: translateX(10px);
+    transition: 0.25s;
+}
+.topbar__right .topbar__right-signup:hover{
+    transform: scaleY(0.8);
 }
 .topbar__right .topbar__right-login{
     background-color: #3366ff;
     border: none;
-    color: white
+    color: white;
+    transition: 0.25s;
 }
-
+.topbar__right .topbar__right-login:hover{
+    border: none;
+    transform: scale(0.8);
+}
 /* header */
 .header{
     background: #f7f5fd;
@@ -286,4 +295,77 @@ body{
 }
 .icon__footer i {
     margin: 0 10px;
+}
+
+/* login form */
+.bx-x{
+    position: fixed;
+    top:0;
+    right: 0;
+    font-size: 70px;
+    color: white;
+    cursor: pointer;
+}
+.login{
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.3);
+    pointer-events: none;
+    transition: 0.5s;
+}
+.login .container{
+    width: 400px;
+    height: 300px;
+    background: #2d2d2d;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+.container h1:first-child{
+    width: 400px;
+    height: 70px;
+    background: #F8D57E;
+    border-radius: 5px ;
+}
+.container input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+}
+
+.container button{
+    height: 55px;
+    width: 155px;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #F8D57E;
+    border: none;
+    color: white;
+    margin-top: 30px;
+    transition: 0.25s;
+}
+.container button:hover{
+    transform: scale(0.8);
+}
+.show{
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
 }
